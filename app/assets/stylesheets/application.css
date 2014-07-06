@@ -37,7 +37,6 @@
   display: block;
   float:left;
   position: absolute;
-
 }
 
 .table-responsive{
@@ -109,6 +108,24 @@ thead th{
   top:2px;
 }
 
-.page-header{
+/*.page-header{
   margin-left:100px;
+}
+*/
+.alert-dismissable{
+  width:800px;
+  margin:0 auto;
+}
+
+@media (max-width: 480px) {
+   .map-container{
+    width: 95%;
+    height: 89%;
+    margin: 0;
+    padding: 0;
+   }
+
+   .table-responsive{
+     display:none;
+   }
 }
