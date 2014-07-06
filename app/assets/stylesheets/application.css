@@ -14,21 +14,29 @@
  *= require_self
  */
 
+ html, body{
+   height:100%;
+ }
+
+ body {
+   font-family: 'Source Sans Pro';
+ }
+
 .map-canvas{
-  margin:10px;
+  margin-left: 10px;
   width:100%;
-  height:500px !important;
+  height: 100%;
+  position: relative;
 }
 
 .map-container{
   margin: 0;
   padding: 0;
-  width: 75%;
-  height: 100%;
+  width: 74%;
+  height: 90%;
   display: block;
   float:left;
-}
-.page-header{
+  position: absolute;
 
 }
 
@@ -36,6 +44,7 @@
   width:24%;
   right: 0;
   position: absolute;
+  margin-right: 10px;
 }
 
 /* add required field asterisk */
@@ -48,4 +57,58 @@ label.required:after {
 }
 #map label {
   width: auto; display:inline;
+}
+
+.navbar-default{
+  background-color: #C2C094;
+}
+
+.navbar a:link{
+  text-decoration: none;
+}
+
+.navbar a:visited{
+  color: #ffffcc;
+}
+
+.navbar-brand{
+  color: #ffffcc;
+  font-size: 22px;
+}
+
+.navbar-brand a:visited{
+  color: #ffffcc;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffcc;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #6d1320;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffffcc;
+}
+
+.menu a{
+  color: #6d1320;
+  font-size: 15px;
+}
+
+thead th{
+  text-align: center;
+  color:#6d1320;
+  background-color: #C2C094;
+}
+
+.btn-primary{
+  background-color: #6d1320;
+  border-color: #60111c;
+  position: relative;
+  top:2px;
+}
+
+.page-header{
+  margin-left:100px;
 }

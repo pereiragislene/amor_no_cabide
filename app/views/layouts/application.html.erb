@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
@@ -17,7 +18,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -29,12 +30,19 @@
         <%= link_to "Amor no Cabide", "/", :class => "navbar-brand" %>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
+        <ul class="nav navbar-nav menu">
+          
           <li><a href="/about">Sobre</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%= link_to new_ponto_path, :class => 'btn btn-primary btn-lg' do %>
+          <span class="glyphicon glyphicon-map-marker"></span>
+          Cadastrar ponto
+        <% end %>
+      </ul>
       </div>
+
     </div>
   </div>
   <div class="">
