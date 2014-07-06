@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to pontos_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Voltar
+  <% end %>
+  <%= link_to edit_ponto_path(@ponto), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h3>Onde está este cabide:</h3>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Latitude:</dt>
+  <dd><%= @ponto.latitude %></dd>
+
+  <dt>Longitude:</dt>
+  <dd><%= @ponto.longitude %></dd>
+
+  <dt>Logradouro:</dt>
+  <dd><%= @ponto.logradouro %></dd>
+
+  <dt>Cidade:</dt>
+  <dd><%= @ponto.cidade %></dd>
+
+  <dt>Estado:</dt>
+  <dd><%= @ponto.estado %></dd>
+
+  <dt>Cep:</dt>
+  <dd><%= @ponto.cep %></dd>
+
+</dl>

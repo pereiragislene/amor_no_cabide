@@ -1,0 +1,56 @@
+<%= form_for(@ponto, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @ponto.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4>Ops! Parece que você esqueceu de algo:</h4>
+
+      <ul>
+      <% @ponto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group" style="display:none;">
+    <%= f.label :latitude, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :latitude, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group" style="display:none;">
+    <%= f.label :longitude, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :longitude, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :logradouro, :class => "col-sm-2 control-label required" %>
+    <div class="col-sm-10">
+      <%= f.text_field :logradouro, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cidade, :class => "col-sm-2 control-label required" %>
+    <div class="col-sm-10">
+      <%= f.text_field :cidade, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :estado, :class => "col-sm-2 control-label required" %>
+    <div class="col-sm-10">
+      <%= f.text_field :estado, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cep, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :cep, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :value => "Salvar", :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
