@@ -10,7 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-    <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+  <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
   <![endif]-->
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -31,32 +31,66 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav menu">
+          <li><a href="#" data-toggle="modal" data-target="#modalAbout">Sobre nós</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#modalContact">Contato</a></li>
 
-          <li><a href="/about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
         </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <%= link_to new_ponto_path, :class => 'btn btn-primary btn-lg' do %>
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to new_ponto_path, :class => 'btn btn-primary btn-lg' do %>
           <span class="glyphicon glyphicon-map-marker"></span>
           Cadastrar ponto
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
       </div>
 
     </div>
   </div>
   <div class="">
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <%= msg %>
-      <% end %>
+    <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= msg %>
+    <% end %>
     <% end %>
 
     <%= yield %>
 
     <div class="container">
 
+    </div>
+    <!-- Modals -->
+    <div class="modal fade" id="modalAbout" tabindex="-1" role="dialog" aria-labelledby="modalLabelAbout" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modalLabelAbout">Sobre nós</h4>
+          </div>
+          <div class="modal-body">
+            <p>O Amor no Cabide é um movimento para adesão da população: doe amor através de agasalhos em bom estado e quentinhos.<br/><br/>
+            <b>Qual é o objetivo?</b><br/>
+            Espalhar cabides pela cidade e promover a doação de agasalhos para quem precisa.<br/><br/>
+            <b>Como funciona?</b><br/>
+            - Todos podem participar do movimento;<br/>
+            - Cada pessoa pode colocar roupas em cabides já existentes ou adicionar um novo pela cidade;<br/>
+            - O movimento conta com o bom senso de todos para que os mais necessitados se apropriem das doações.<br/><br/>
+            <b>Participe! ♥</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalLabelContact" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modalLabelContact">Contato</h4>
+          </div>
+          <div class="modal-body">
+            Fale conosco...
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
