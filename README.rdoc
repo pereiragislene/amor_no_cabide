@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O Amor no Cabide é um projeto que estimula a doação de roupas em Porto Alegre e está crescendo para outros estados.
 
-Things you may want to cover:
+Criei este site para ajudar pessoas a encontrarem os pontos onde existem cabides, e permitir que novos pontos sejam cadastrados.
 
-* Ruby version
+* Tech Stack:
+- Ruby 1.9.3
+- Rails 4.1.1
+- ActiveAdmin (Gem para administração de pontos e usuários)
+- Bootstrap-generators (Gem)
+- Google Maps API
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Site disponível em: http://amornocabide.herokuapp.com/
