@@ -4,7 +4,7 @@ O Amor no Cabide é um projeto que estimula a doação de roupas em Porto Alegre
 
 Criei este site para ajudar pessoas a encontrarem os pontos onde existem cabides, e permitir que novos pontos sejam cadastrados.
 
-* Tech Stack:
+Tech Stack:
 - Ruby 1.9.3
 - Rails 4.1.1
 - ActiveAdmin (Gem para administração de pontos e usuários)
