@@ -9,14 +9,14 @@
   <h3>Pontos de Amor</h3>
 </div>
 -->
-<div style="width:100%;">
+<div class="page-container">
   <div class="map-container">
     <div id="map" class="map-canvas"></div>
   </div>
 
 
   <div class="table-responsive hidden-xs">
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-hover">
       <thead>
         <tr>
               <th>Pontos Existentes</th>
@@ -25,15 +25,12 @@
 
       <tbody>
         <%= content_tag_for(:tr, @pontos) do |ponto| %>
-              <td><%= ponto.address%></td>
+          <td><%= ponto.address%></td>
         <% end %>
       </tbody>
     </table>
   </div>
 </div>
-
-
-
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
