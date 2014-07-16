@@ -3,7 +3,7 @@ class Ponto < ActiveRecord::Base
   after_validation :geocode
 
   def address
-    [logradouro, cidade, estado, cep].reject(&:empty?).compact.join(', ')
+    [logradouro, cidade, estado].reject(&:empty?).compact.join(', ')
   end
 
   validates_presence_of :logradouro, :message => " - deve ser preenchido"
