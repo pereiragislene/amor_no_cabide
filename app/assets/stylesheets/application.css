@@ -26,6 +26,9 @@ body {
 
 }
 
+.page-header {
+  margin-top:80px;
+}
 .map-container{
   width: 75%;
   height: 100%;
@@ -105,6 +108,7 @@ thead th{
   border-color: #60111c;
   position: relative;
   top:2px;
+  color: #ffffcc;
 }
 
 .alert-dismissable{
@@ -145,6 +149,4 @@ table{
 tbody{
   overflow-y: scroll;
   height: 400px;
-
-  position: absolute;
 }
