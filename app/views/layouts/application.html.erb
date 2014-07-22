@@ -27,7 +27,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "Amor no Cabide", "/", :class => "navbar-brand" %>
+
+
+        <%= link_to(image_tag("/assets/logo.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo"), "/", :class => "navbar-brand") %>
+
+
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav menu">
@@ -47,12 +51,12 @@
   </div>
   <div class="">
     <% flash.each do |name, msg| %>
-    <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <%= msg %>
+      <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= msg %>
+      <% end %>
     <% end %>
-    <% end %>
-
+    
     <%= yield %>
 
     <div class="container">
@@ -68,30 +72,30 @@
           </div>
           <div class="modal-body">
             <p>O Amor no Cabide é um movimento para adesão da população: doe amor através de agasalhos em bom estado e quentinhos.<br/><br/>
-            <b>Qual é o objetivo?</b><br/>
-            Espalhar cabides pela cidade e promover a doação de agasalhos para quem precisa.<br/><br/>
-            <b>Como funciona?</b><br/>
-            - Todos podem participar do movimento;<br/>
-            - Cada pessoa pode colocar roupas em cabides já existentes ou adicionar um novo pela cidade;<br/>
-            - O movimento conta com o bom senso de todos para que os mais necessitados se apropriem das doações.<br/><br/>
-            <b>Participe! ♥</b></p>
+              <b>Qual é o objetivo?</b><br/>
+              Espalhar cabides pela cidade e promover a doação de agasalhos para quem precisa.<br/><br/>
+              <b>Como funciona?</b><br/>
+              - Todos podem participar do movimento;<br/>
+              - Cada pessoa pode colocar roupas em cabides já existentes ou adicionar um novo pela cidade;<br/>
+              - O movimento conta com o bom senso de todos para que os mais necessitados se apropriem das doações.<br/><br/>
+              <b>Participe! ♥</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalLabelContact" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="modalLabelContact">Contato</h4>
+            </div>
+            <div class="modal-body">
+              Fale conosco...
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalLabelContact" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="modalLabelContact">Contato</h4>
-          </div>
-          <div class="modal-body">
-            Fale conosco...
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

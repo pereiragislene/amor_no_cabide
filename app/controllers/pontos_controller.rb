@@ -4,7 +4,17 @@ class PontosController < ApplicationController
   # GET /pontos
   # GET /pontos.json
   def index
-    @pontos = Ponto.all
+    @pontos = Ponto.all #where("cidade = ?", 'Salvador').order(:logradouro) #contais("Recife")
+
+
+  #if (params[:area] && Area.all.collect(&:name).include?(params[:area][:name]))
+  #   @venues = Venue.send(params[:area][:name].downcase)
+  #else
+  #   @venues = Venue.all
+  #end
+
+    #@pontos = @pontos.contains(params[:cidade])
+
     @hash = Gmaps4rails.build_markers(@pontos) do |ponto, marker|
         marker.lat ponto.latitude
         marker.lng ponto.longitude
@@ -34,6 +44,7 @@ class PontosController < ApplicationController
   # POST /pontos.json
   def create
     @ponto = Ponto.new(ponto_params)
+    #binding.pry
 
     respond_to do |format|
       if @ponto.save
@@ -78,6 +89,6 @@ class PontosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ponto_params
-      params.require(:ponto).permit(:logradouro, :cidade, :estado, :cep)
+      params.require(:ponto).permit(:logradouro, :cidade, :state_id, :cep)
     end
 end

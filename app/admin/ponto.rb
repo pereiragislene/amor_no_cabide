@@ -13,5 +13,5 @@ ActiveAdmin.register Ponto do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  permit_params :logradouro, :cidade, :estado, :cep
+  permit_params :logradouro, :cidade, :cep
 end

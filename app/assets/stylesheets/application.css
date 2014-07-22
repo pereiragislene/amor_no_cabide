@@ -45,7 +45,7 @@ body {
   top:0;
   left:0;
   right:0;
-  margin-top:50px;
+  margin-top:60px;
 }
 
 /* add required field asterisk */
@@ -60,12 +60,30 @@ label.required:after {
   width: auto; display:inline;
 }
 
+#logo {
+  width: 93px;
+  height: 50px;
+}
+
+.navbar .brand {
+max-height: 50px;
+overflow: visible;
+padding-top: 0;
+padding-bottom: 0;
+}
+.navbar a.navbar-brand {padding: 4px 15px 8px; }
+
 .navbar-default{
-  background-color: #C2C094;
+  height: 60px;
+  background-color: #BDBA8E;
 }
 
 .navbar a:link{
   text-decoration: none;
+}
+
+.navbar-nav > li > a {
+  padding-top: 20px;
 }
 
 .navbar a:visited{
@@ -107,7 +125,7 @@ thead th{
   background-color: #6d1320;
   border-color: #60111c;
   position: relative;
-  top:2px;
+  top:7px;
   color: #ffffcc;
 }
 
@@ -143,7 +161,7 @@ tr {
 }
 
 table{
-  margin-top:52px;
+  margin-top:61px;
   height:500px;
 }
 tbody{

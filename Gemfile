@@ -9,7 +9,9 @@ group :production do
   gem 'rails_12factor'
 end
 group :development, :test do
+  gem 'pry'
   gem 'sqlite3'
+  gem 'webrick', '~> 1.3.1'
 end
 
 # Use SCSS for stylesheets
