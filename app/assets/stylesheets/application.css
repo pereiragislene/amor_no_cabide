@@ -142,12 +142,13 @@ thead th{
     padding: 0;
    }
 
-   .table-responsive{
+   .right-bar{
      display:none;
    }
 }
 
-.table-responsive{
+.right-bar{
+  margin-top:61px;
   width:25%;
   right: 0;
   position: absolute;
@@ -161,7 +162,7 @@ tr {
 }
 
 table{
-  margin-top:61px;
+
   height:500px;
 }
 tbody{

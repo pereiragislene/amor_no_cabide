@@ -4,18 +4,13 @@ class PontosController < ApplicationController
   # GET /pontos
   # GET /pontos.json
   def index
-    @pontos = Ponto.all #where("cidade = ?", 'Salvador').order(:logradouro) #contais("Recife")
+     if (params[:state] && State.all.collect(&:id).include?(params[:state][:id].to_i))
+       @pontos = Ponto.where(state_id: params[:state][:id])
+     else
+       @pontos = Ponto.all
+     end
 
-
-  #if (params[:area] && Area.all.collect(&:name).include?(params[:area][:name]))
-  #   @venues = Venue.send(params[:area][:name].downcase)
-  #else
-  #   @venues = Venue.all
-  #end
-
-    #@pontos = @pontos.contains(params[:cidade])
-
-    @hash = Gmaps4rails.build_markers(@pontos) do |ponto, marker|
+     @hash = Gmaps4rails.build_markers(@pontos) do |ponto, marker|
         marker.lat ponto.latitude
         marker.lng ponto.longitude
         marker.infowindow ponto.address
@@ -29,6 +24,7 @@ class PontosController < ApplicationController
   # GET /pontos/1
   # GET /pontos/1.json
   def show
+
   end
 
   # GET /pontos/new

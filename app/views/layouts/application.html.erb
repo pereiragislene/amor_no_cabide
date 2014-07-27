@@ -37,8 +37,10 @@
         <ul class="nav navbar-nav menu">
           <li><a href="#" data-toggle="modal" data-target="#modalAbout">Sobre nós</a></li>
           <li><a href="#" data-toggle="modal" data-target="#modalContact">Contato</a></li>
-
         </ul>
+
+        
+
         <ul class="nav navbar-nav navbar-right">
           <%= link_to new_ponto_path, :class => 'btn btn-primary btn-lg' do %>
           <span class="glyphicon glyphicon-map-marker"></span>
@@ -51,10 +53,10 @@
   </div>
   <div class="">
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <%= msg %>
-      <% end %>
+    <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable" do %>
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= msg %>
+    <% end %>
     <% end %>
 
     <%= yield %>
