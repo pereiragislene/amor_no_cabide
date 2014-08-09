@@ -115,11 +115,6 @@ padding-bottom: 0;
   font-size: 15px;
 }
 
-thead th{
-  text-align: center;
-  color:#6d1320;
-  background-color: #C2C094;
-}
 
 .btn-primary{
   background-color: #6d1320;
@@ -152,8 +147,15 @@ thead th{
   width:25%;
   right: 0;
   position: absolute;
-  height:90%;
+  height:80%;
   overflow-y:auto;
+}
+
+
+thead th{
+  text-align: center;
+  color:#6d1320;
+  background-color: #C2C094;
 }
 
 tr {
@@ -162,10 +164,18 @@ tr {
 }
 
 table{
+  height: 300px;
+  table-layout:fixed;
+  border-collapse:collapse;
 
-  height:500px;
+
 }
 tbody{
-  overflow-y: scroll;
-  height: 400px;
+  display: block;
+  overflow: auto;
+}
+
+thead{
+    display:block;
+
 }

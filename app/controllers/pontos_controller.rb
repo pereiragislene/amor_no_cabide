@@ -4,8 +4,8 @@ class PontosController < ApplicationController
   # GET /pontos
   # GET /pontos.json
   def index
-     if (params[:state] && State.all.collect(&:id).include?(params[:state][:id].to_i))
-       @pontos = Ponto.where(state_id: params[:state][:id])
+     if (params[:state_id] && State.all.collect(&:id).include?(params[:state_id].to_i))
+       @pontos = Ponto.where(state_id: params[:state_id])
      else
        @pontos = Ponto.all
      end
