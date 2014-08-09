@@ -11,7 +11,7 @@ class Ponto < ActiveRecord::Base
   def address
     #MyModel.find(Filter.find_by_name(params[:filter_name]).options)
 
-    state_name ||= state.name unless state.nil?
+    state_name ||= state.acronym unless state.nil?
     [logradouro, cidade, state_name].reject(&:blank?).compact.join(', ')
   end
 
