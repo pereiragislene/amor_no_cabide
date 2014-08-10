@@ -9,14 +9,7 @@ class Ponto < ActiveRecord::Base
   validates_presence_of :state_id, :message => " - deve ser preenchido"
 
   def address
-    #MyModel.find(Filter.find_by_name(params[:filter_name]).options)
-
-    state_name ||= state.acronym unless state.nil?
-    [logradouro, cidade, state_name].reject(&:blank?).compact.join(', ')
+    state_acronym ||= state.acronym unless state.nil?
+    [logradouro, cidade, state_acronym].reject(&:blank?).compact.join(', ')
   end
-
-
-  #scope :contains, -> (cidade) { where("cidade like ?", "#{cidade}%")}
-    #scope :contains, -> (cidade) { where("cidade like ?", "#{cidade}%")}
-
 end
