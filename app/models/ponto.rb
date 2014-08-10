@@ -3,6 +3,10 @@ class Ponto < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
 
+  auto_strip_attributes :logradouro, :squish => true
+  auto_strip_attributes :cidade, :squish => true
+  auto_strip_attributes :cep, :squish => true
+
 
   validates_presence_of :logradouro, :message => " - deve ser preenchido"
   validates_presence_of :cidade, :message => " - deve ser preenchido"

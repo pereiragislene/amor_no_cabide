@@ -56,7 +56,7 @@ gem 'bootstrap-generators', '~> 3.1.1'
 
 gem 'geocoder'
 gem 'gmaps4rails'
-
+gem "auto_strip_attributes", "~> 2.0"
 
 gem 'activeadmin',      github: 'gregbell/active_admin'             # ActiveAdmin backend framework for Rails administration interface
 gem 'polyamorous',      github: 'activerecord-hackery/polyamorous'  # Require for ActiveAdmin to work with Rails 4.1
